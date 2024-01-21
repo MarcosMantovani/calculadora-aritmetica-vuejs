@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-4 mx-auto d-flex">
+            <div class="col mx-auto d-flex">
                 <label class="form-control text-center" for="numero-b">Operação:</label>
                 <select class="form-control" @change="props.selecionaOperacao">
                     <option class="text-center" value="adicao">Adição</option>
@@ -29,9 +29,6 @@
                     <option class="text-center" value="multiplicacao">Multiplicação</option>
                     <option class="text-center" value="divisao">Divisão</option>
                 </select>
-            </div>
-            <div class="col-3 mx-auto">
-                <button type="submit" class="btn btn-success form-control" @click.prevent="props.calcular">Calcular</button>
             </div>
         </div>
     </form>

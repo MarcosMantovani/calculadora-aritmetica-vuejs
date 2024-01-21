@@ -12,14 +12,17 @@ const estado = reactive({
 
 const recebeNumeroA = (evento) => {
   estado.numeroA = parseFloat(evento.target.value);
+  calcular();
 };
 
 const recebeNumeroB = (evento) => {
   estado.numeroB = parseFloat(evento.target.value);
+  calcular();
 };
 
 const selecionaOperacao = (evento) => {
   estado.operacao = evento.target.value;
+  calcular();
 };
 
 const calcular = () => {
@@ -50,6 +53,6 @@ const calcular = () => {
 <template>
   <div class="container">
     <Header />
-    <Form :resposta="estado.resposta" :recebe-numero-a="recebeNumeroA" :recebe-numero-b="recebeNumeroB" :seleciona-operacao="selecionaOperacao" :calcular="calcular"/>
+    <Form :resposta="estado.resposta" :recebe-numero-a="recebeNumeroA" :recebe-numero-b="recebeNumeroB" :seleciona-operacao="selecionaOperacao" />
   </div>
 </template>
